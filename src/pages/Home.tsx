@@ -4,6 +4,7 @@ import type { RootState, AppDispatch } from '../store';
 import { fetchPosts, toggleReaction, setFetched, type ReactionType } from '../store/postsSlice';
 import { useDebounce } from '../hooks/useDebounce';
 import { PostCard } from '../components/PostCard';
+import SearchIcon from '@icons/ic_search.svg';
 
 export default function Home() {
     const dispatch = useDispatch<AppDispatch>();
@@ -51,7 +52,7 @@ export default function Home() {
 
             <div className="relative mb-4">
                 <img className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 opacity-60"
-                    src="src/assets/ic_search.svg" />
+                    src={SearchIcon} />
                 <input className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded focus:outline-none"
                     placeholder="Поиск по названию статьи"
                     value={value}

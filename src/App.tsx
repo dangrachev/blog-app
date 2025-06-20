@@ -4,7 +4,7 @@ import PostPage from './pages/PostPage';
 
 export default function App() {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/blog-app">
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/posts/:id" element={<PostPage />} />
